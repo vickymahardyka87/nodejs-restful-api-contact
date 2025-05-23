@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { ResponseError } from '../error/response-error';
+import { ResponseError } from '../error/response-error.js';
 
 export const comparePassword = async (password, hashedPassword) => {
 	const isPasswordValid = await bcrypt.compare(password, hashedPassword);
